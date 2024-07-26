@@ -2,8 +2,9 @@ package main
 
 import "fmt"
 
+const MessagePrefix = "Hello, "
 func Hello(name string) string {
-	return "Hello, " + name
+	return MessagePrefix + name
 }
 
 func main() {
