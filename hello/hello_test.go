@@ -2,10 +2,35 @@ package main
 
 import "testing"
 
-func TestHello(t *testing.T) {
-	got := Hello("Nate")
-	want := "Hello, Nate"
+// Write a test
 
+// Make the compiler pass
+
+// Run the test, see that it fails and check the error message is meaningful
+
+// Write enough code to make the test pass
+
+// Refactor
+
+func TestHello(t *testing.T) {
+	t.Run("Valid string passed to Hello()", func(t *testing.T) {
+		got := Hello("Nate")
+		want := "Hello, Nate"
+
+		assertCorrectMessage(t, got, want)
+
+	})
+
+	t.Run("Empty string passed to Hello()", func(t *testing.T) {
+		got := Hello("")
+		want := "Hello, World"
+
+		assertCorrectMessage(t, got, want)
+	})
+}
+
+func assertCorrectMessage(t testing.TB, got, want string) {
+	t.Helper()
 	if got != want {
 		t.Errorf("got %q want %q", got, want)
 	}

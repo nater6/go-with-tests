@@ -4,6 +4,9 @@ import "fmt"
 
 const MessagePrefix = "Hello, "
 func Hello(name string) string {
+	if name == "" {
+		name = "World"
+	}
 	return MessagePrefix + name
 }
 
