@@ -17,8 +17,9 @@ func Hello(name, language string) string {
 		return SpanishHelloPrefix + name
 	case french:
 		return FrenchHelloPrefix + name
+	default:
+		return EnglishHelloPrefix + name
 	}
-	return EnglishHelloPrefix + name
 }
 
 func main() {
