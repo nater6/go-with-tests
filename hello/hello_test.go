@@ -14,7 +14,7 @@ import "testing"
 
 func TestHello(t *testing.T) {
 	t.Run("Valid string passed to Hello()", func(t *testing.T) {
-		got := Hello("Nate","")
+		got := Hello("Nate", "")
 		want := "Hello, Nate"
 
 		assertCorrectMessage(t, got, want)
@@ -22,7 +22,7 @@ func TestHello(t *testing.T) {
 	})
 
 	t.Run("Empty string passed to Hello()", func(t *testing.T) {
-		got := Hello("","")
+		got := Hello("", "")
 		want := "Hello, World"
 
 		assertCorrectMessage(t, got, want)

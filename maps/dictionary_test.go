@@ -76,7 +76,6 @@ func TestDelete(t *testing.T) {
 	_, err := dictionary.Search(word)
 
 	assertErrors(t, err, ErrNotFound)
-	
 
 }
 

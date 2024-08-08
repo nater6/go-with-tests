@@ -13,7 +13,7 @@ func (d Dictionary) Search(word string) (string, error) {
 }
 
 // Add sets the word and definition in the dictionary.
-//If the word is already defined ErrWordDoesNotExist is returned
+// If the word is already defined ErrWordDoesNotExist is returned
 func (d Dictionary) Add(word, definition string) error {
 	_, err := d.Search(word)
 	switch err {
@@ -27,8 +27,9 @@ func (d Dictionary) Add(word, definition string) error {
 	}
 	return nil
 }
-//Update replaces the definition of a word if it exists in the dictionary.
-//If the word is not defined ErrWordDoesNotExist is returned
+
+// Update replaces the definition of a word if it exists in the dictionary.
+// If the word is not defined ErrWordDoesNotExist is returned
 func (d Dictionary) Update(word, newDefinition string) error {
 	_, err := d.Search(word)
 	switch err {
@@ -43,7 +44,7 @@ func (d Dictionary) Update(word, newDefinition string) error {
 	return nil
 }
 
-//Delete removes a word from the dictionary
+// Delete removes a word from the dictionary
 func (d Dictionary) Delete(word string) {
 	delete(d, word)
 }

@@ -19,7 +19,7 @@ func TestWallet(t *testing.T) {
 
 	t.Run("withdraw", func(t *testing.T) {
 		wallet := Wallet{balance: 20}
-		err :=  wallet.Withdraw(Bitcoin(10))
+		err := wallet.Withdraw(Bitcoin(10))
 		if err != nil {
 			t.Fatalf("Expected <nil> got %v", err)
 		}
@@ -36,7 +36,6 @@ func TestWallet(t *testing.T) {
 		wallet := Wallet{balance: startingBalance}
 		got := wallet.Withdraw(Bitcoin(100))
 		want := ErrInsufficientFunds
-		
 
 		if got == nil {
 			t.Fatal("expected an error but didn't get one")
@@ -47,5 +46,3 @@ func TestWallet(t *testing.T) {
 		}
 	})
 }
-
-

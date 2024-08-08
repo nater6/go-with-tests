@@ -20,6 +20,7 @@ func (w *Wallet) Deposit(amount Bitcoin) {
 }
 
 var ErrInsufficientFunds string = "cannot withdraw, insufficient funds"
+
 func (w *Wallet) Withdraw(amount Bitcoin) error {
 	if amount > w.balance {
 		return errors.New(ErrInsufficientFunds)
