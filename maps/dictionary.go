@@ -20,7 +20,7 @@ func (d Dictionary) Add(word, definition string) error {
 	case ErrNotFound:
 		d[word] = definition
 	case nil:
-		return ErrWordDoesNotExist
+		return ErrWordExists
 	default:
 		return err
 
