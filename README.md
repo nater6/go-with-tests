@@ -6,3 +6,10 @@
 - Writing the smallest amount of code to make it pass so we know we have working software
 
 - Then refactor, backed with the safety of our tests to ensure we have well-crafted code that is easy to work with
+
+
+Test should have a happy path, this is what we expect to see when the function completes "successfully"
+
+There should be paths that also show how errors are handled and returned
+
+Test behaivour not implementation
